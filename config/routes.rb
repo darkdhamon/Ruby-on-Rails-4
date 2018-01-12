@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
-  resources :todo_list_items
+  root 'home#index'
+
+  get  '/about' => 'home#about'
+  post '/questions' => 'home#ask_question'
+  get '/questions/:id' => 'home#question'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
