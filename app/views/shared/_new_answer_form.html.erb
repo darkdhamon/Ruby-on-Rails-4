@@ -1,9 +1,10 @@
-<div id="question" class="modal" tabindex="-1" role="dialog">
+<div id="answer" class="modal" tabindex="-1" role="dialog">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
-        <%= form_for :question, url:"/questions" do%>
+      <%= form_for :answer, url:"/answers" do%>
+        <input type="hidden" id="questionid" name="answer[question_id]" value="<%=	 @question.id %>">
         <div class="modal-header">
-          <h5 class="modal-title">Ask A Question</h5>
+          <h5 class="modal-title">Answer A Question</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -12,26 +13,26 @@
           <div class="container-fluid">
             <div class="row form-group">
               <div class="col-sm-2">
-                <label for="email">Email</label>
+                <label for="answerEmail">Email</label>
 
               </div>
               <div class="col-sm-10">
-                <input type="email" class="form-control" id="email" name="question[email]" placeholder="user@email.com" required>
+                <input type="email" class="form-control" id="answerEmail" name="answer[email]" placeholder="user@email.com" required>
               </div>
             </div>
             <div class="row form-group">
-              <div class="col-sm-2"><label for="question_body">Question</label></div>
+              <div class="col-sm-2"><label for="answerAnswer">Answer</label></div>
               <div class="col-sm-10">
-                <textarea class="form-control" id="question_body" name="question[body]" placeholder="What would you like to know?" required></textarea>
+                <textarea class="form-control" id="answerAnswer" name="answer[body]" placeholder="So in answer to your question..." required></textarea>
               </div>
             </div>
           </div>
         </div>
         <div class="modal-footer">
-          <button type="submit" class="btn btn-primary">Submit Question</button>
+          <button type="submit" class="btn btn-primary">Submit Answer</button>
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
         </div>
-        <% end %>
+      <% end %>
     </div>
   </div>
 </div>

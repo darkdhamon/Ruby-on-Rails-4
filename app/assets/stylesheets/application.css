@@ -13,3 +13,25 @@
  *= require_tree .
  *= require_self
  */
+
+.well{
+    border: #dddddd solid 1px;
+    border-top: none;
+    border-radius: 0 0 20px 20px;
+    background: #eeeeee;
+    padding: 20px;
+}
+
+.navbar{
+    color: #eeeeee;
+}
+
+.navbar-brand,
+.nav-link,
+.navbar-brand:visited,
+.nav-link:visited,
+.navbar-brand:active
+.nav-link:active
+{
+    color: #eeeeee;
+}
